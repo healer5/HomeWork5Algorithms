@@ -1,0 +1,27 @@
+@startuml
+class org.example.Factorial {
+- {static} Logger logger
++ {static} void main(String[])
+}
+
+
+class org.example.Factorial$FibonacciRecursive {
++ {static} long fibonacci(int)
+}
+
+class org.example.Factorial$FibonacciDP {
+- {static} Map<Integer,Long> memo
++ {static} long fibonacci(int)
+}
+
+
+class org.example.Factorial$FibonacciIteration {
++ {static} long fibonacci(int)
+}
+
+
+
+org.example.Factorial +.. org.example.Factorial$FibonacciRecursive
+org.example.Factorial +.. org.example.Factorial$FibonacciDP
+org.example.Factorial +.. org.example.Factorial$FibonacciIteration
+@enduml
